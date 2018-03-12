@@ -13,6 +13,42 @@
 
         <include layout="@layout/toolbar_template1" />
 
+        <LinearLayout
+            android:id="@+id/header_view"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textAllCaps="false"
+                android:textColor="@color/colorIcon"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                android:id="@+id/btn_sort"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Key"
+                android:textAllCaps="false"
+                android:layout_gravity="end|center_vertical"
+                android:drawableRight="@drawable/ic_arrow_downward_black_24dp"
+                android:drawableTint="@color/colorIcon"
+                android:textColor="@color/colorIcon"
+                android:tag="desc"
+                style="?android:attr/borderlessButtonStyle" />
+
+        </LinearLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/wx_rw_beers"
             android:layout_width="match_parent"
