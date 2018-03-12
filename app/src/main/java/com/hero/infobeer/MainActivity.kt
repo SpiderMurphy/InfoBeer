@@ -33,14 +33,14 @@ class MainActivity : AppCompatActivity() {
             var adapter = wx_rw_beers.adapter as ItemAdapter
 
             if(btn_sort.tag.equals("asc")) {
-                adapter.presenter.sort(true)
+                adapter.presenter.sort(false)
                 btn_sort.tag = "desc"
-                btn_sort.setCompoundDrawables(null, null, ContextCompat.getDrawable(this@MainActivity, R.drawable.ic_arrow_upward_black_24dp), null)
+                btn_sort.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_arrow_downward_black_24dp, 0)
             }
             else{
-                adapter.presenter.sort()
+                adapter.presenter.sort(true)
                 btn_sort.tag = "asc"
-                btn_sort.setCompoundDrawables(null, null, ContextCompat.getDrawable(this@MainActivity, R.drawable.ic_arrow_downward_black_24dp), null)
+                btn_sort.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_arrow_upward_black_24dp, 0)
             }
 
             wx_rw_beers.adapter.notifyDataSetChanged()
@@ -69,9 +69,9 @@ class MainActivity : AppCompatActivity() {
                         null,
                         Response.Listener { response ->
                             if(response.beers.size > 0)
-                                wx_rw_beers.visibility = View.VISIBLE
+                                header_view.visibility = View.VISIBLE
                             else
-                                wx_rw_beers.visibility = View.GONE
+                                header_view.visibility = View.GONE
 
                             var presenter = ItemPresenter()
 
