@@ -3,10 +3,5 @@
     <dimen name="activity_horizontal_margin">24dp</dimen>
     <dimen name="activity_vertical_margin">8dp</dimen>
     <dimen name="actionbar_horizontal_margin">8dp</dimen>
-    <dimen name="adapter_city_height">80dp</dimen>
-    <dimen name="collapsible_content_height">280dp</dimen>
-    <dimen name="image_details_width">180dp</dimen>
-    <dimen name="details_title">22sp</dimen>
-    <dimen name="details_subhead">18sp</dimen>
-    <dimen name="image_details_margin">88dp</dimen>
+    <dimen name="adapter_beer_height">80dp</dimen>
 </resources>
